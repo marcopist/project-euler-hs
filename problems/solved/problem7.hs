@@ -5,13 +5,13 @@
 -}
 -- From problem 3
 isPrime :: Int -> Bool
-isPrime k = (k > 1) && not (any (\x -> mod k x == 0) [2..k-1])
+isPrime k = (k > 1) && not (any (\x -> mod k x == 0) [2 .. k])
 
 allPrimes :: [Int]
 allPrimes = filter isPrime [1..]
 
 res :: Int
-res = last $ take 10001 allPrimes
+res =   allPrimes !! 10001
 
 {-
     status : passed
