@@ -11,5 +11,5 @@ res :: Int
 res = sum $ takeWhile (<4000000) $ filter even fiboseq
 
 {-
-    status : solved
+    status : passed
 -}
