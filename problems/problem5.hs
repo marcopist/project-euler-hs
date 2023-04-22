@@ -11,6 +11,7 @@ glcm [x] = x
 glcm [x, y] = lcm x y
 glcm (x:xs) = lcm x $ glcm xs
 
+res :: Int
 res = glcm [1..20]
 {-
     status : passed
