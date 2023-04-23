@@ -4,15 +4,13 @@
     How many such routes are there through a 20×20 grid?
 -}
 
-data Direction = GoRight | GoDown deriving (Show, Eq)
-data Position = Position {x::Int, y::Int} deriving (Show, Eq)
+cnt :: (Eq t, Num t) => t -> t -> t
+cnt x 0 = x
+cnt 0 y = y
+cnt x y = x + y + cnt (x-1) (y-1)
 
--- | Returns the next position given a direction
-nextPosition :: Position -> Direction -> Position
-nextPosition (Position x y) GoRight = Position (x+1) y
-nextPosition (Position x y) GoDown = Position x (y+1)
-
-
+res :: Integer
+res = cnt 20 20
 
 {-
     status : in progress
