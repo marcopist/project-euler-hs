@@ -4,13 +4,8 @@
     How many such routes are there through a 20×20 grid?
 -}
 
-cnt :: (Eq t, Num t) => t -> t -> t
-cnt x 0 = x
-cnt 0 y = y
-cnt x y = x + y + cnt (x-1) (y-1)
-
-res :: Integer
-res = cnt 20 20
+import Math.Combinatorics.Exact.Binomial (choose)
+res = choose 40 20
 
 {-
     status : in progress
