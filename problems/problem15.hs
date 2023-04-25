@@ -8,5 +8,5 @@ import Math.Combinatorics.Exact.Binomial (choose)
 res = choose 40 20
 
 {-
-    status : in progress
+    status : passed
 -}
